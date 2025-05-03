@@ -27,3 +27,29 @@ func twoArraysFromInput(filename string) ([]int, []int) {
 
 	return left, right
 }
+
+func readFileForDay2(filename string) [][]int {
+	f, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+
+	reports := [][]int{}
+	for scanner.Scan() {
+		a := strings.Split(scanner.Text(), " ")
+		levels := []int{}
+		for _, val := range a {
+			num_val, err := strconv.Atoi(val)
+			if err != nil {
+				log.Fatal(err.Error())
+			}
+			levels = append(levels, num_val)
+		}
+		reports = append(reports, levels)
+	}
+
+	return reports
+}
