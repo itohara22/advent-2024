@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"bufio"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func twoArraysFromInput(filename string) ([]int, []int) {
+func TwoArraysFromInput(filename string) ([]int, []int) {
 	f, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err.Error())
@@ -28,7 +28,7 @@ func twoArraysFromInput(filename string) ([]int, []int) {
 	return left, right
 }
 
-func readFileForDay2(filename string) [][]int {
+func ReadFileForDay2(filename string) [][]int {
 	f, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err.Error())

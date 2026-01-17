@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"kaddu/utils"
+)
 
-func day2_1() {
-	reports := readFileForDay2("day2.txt")
+func Day2_1() {
+	reports := utils.ReadFileForDay2("day2.txt")
 	res := 0
 
 	for _, lvls := range reports {

@@ -1,9 +1,12 @@
-package main
+package day1
 
-import "fmt"
+import (
+	"fmt"
+	"kaddu/utils"
+)
 
-func day1_2() {
-	left, right := twoArraysFromInput("day1.txt")
+func Day1_2() {
+	left, right := utils.TwoArraysFromInput("day1.txt")
 
 	frequency_map := map[int]int{}
 
