@@ -1,10 +1,10 @@
 package main
 
-import "kaddu/internals/day1"
+import (
+	"kaddu/internals/day2"
+)
 
 func main() {
-	day1.Day1()
-	// day1_2()
-	//day2_1()
-
+	//day3.Day3()
+	day2.Day2_2()
 }
